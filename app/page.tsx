@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useRef, useEffect, useCallback } from 'react'
-import { RiDashboardLine, RiRobot2Line, RiPhoneLine, RiSettings3Line, RiArrowUpSFill, RiArrowDownSFill, RiTimeLine, RiCalendarLine, RiUserLine, RiMicLine, RiMicOffLine, RiPhoneOffLine, RiUploadLine, RiCheckLine, RiCloseLine, RiArrowRightSLine, RiFileListLine, RiSearchLine, RiDownloadLine, RiPulseLine, RiVoiceprintLine, RiPhoneFindLine, RiCustomerService2Line, RiTeamLine, RiStarLine, RiFlashlightLine, RiShieldCheckLine, RiLinkLine } from 'react-icons/ri'
+import { RiDashboardLine, RiRobot2Line, RiPhoneLine, RiSettings3Line, RiArrowUpSFill, RiArrowDownSFill, RiTimeLine, RiCalendarLine, RiUserLine, RiMicLine, RiMicOffLine, RiPhoneFill, RiUploadLine, RiCheckLine, RiCloseLine, RiArrowRightSLine, RiFileListLine, RiSearchLine, RiDownloadLine, RiPulseLine, RiVoiceprintLine, RiPhoneFindLine, RiCustomerService2Line, RiTeamLine, RiStarLine, RiFlashlightLine, RiShieldCheckLine, RiLink } from 'react-icons/ri'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -343,7 +343,7 @@ function useVoiceCall() {
           } else if (msg.type === 'error') {
             setError(msg.message || 'Voice agent error')
           }
-        } catch {
+        } catch (_e) {
           // Non-JSON message, ignore
         }
       }
@@ -612,7 +612,7 @@ function VoiceCallModal({ isOpen, voice, onClose }: { isOpen: boolean; voice: Re
                   className="rounded-full h-14 w-14 p-0"
                   onClick={voice.endCall}
                 >
-                  <RiPhoneOffLine className="h-6 w-6" />
+                  <RiPhoneFill className="h-6 w-6" />
                 </Button>
               </>
             )}
@@ -1174,7 +1174,7 @@ function SettingsScreen() {
               />
             </div>
             <div className="flex items-center gap-2 p-2 rounded bg-muted/50">
-              <RiLinkLine className="h-4 w-4 text-muted-foreground" />
+              <RiLink className="h-4 w-4 text-muted-foreground" />
               <span className="text-xs text-muted-foreground">Connected to all voice agents</span>
             </div>
           </CardContent>
