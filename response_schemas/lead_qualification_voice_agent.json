@@ -1,0 +1,37 @@
+{
+  "agent_name": "Lead Qualification Voice Agent",
+  "agent_id": "699aac3607441b9b9ccdfd69",
+  "agent_type": "voice",
+  "accessor": "voice",
+  "has_module_outputs": false,
+  "voice_config": {
+    "mode": "outbound",
+    "initiator": "human",
+    "message": "",
+    "language": "English",
+    "voice": "sage"
+  },
+  "schema": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "AgentResponse",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "lead_score": { "type": "number" },
+          "lead_status": { "type": "string" },
+          "budget": { "type": "string" },
+          "authority": { "type": "string" },
+          "need": { "type": "string" },
+          "timeline": { "type": "string" },
+          "summary": { "type": "string" },
+          "next_steps": { "type": "string" },
+          "prospect_name": { "type": "string" }
+        },
+        "required": ["lead_score", "lead_status", "budget", "authority", "need", "timeline", "summary", "next_steps", "prospect_name"],
+        "additionalProperties": false
+      }
+    }
+  }
+}

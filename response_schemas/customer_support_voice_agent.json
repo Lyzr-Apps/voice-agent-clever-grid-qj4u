@@ -1,0 +1,32 @@
+{
+  "agent_name": "Customer Support Voice Agent",
+  "agent_id": "699aac1ddbfbe2b909c9ace0",
+  "agent_type": "voice",
+  "accessor": "voice",
+  "has_module_outputs": false,
+  "voice_config": {
+    "mode": "inbound",
+    "initiator": "human",
+    "message": "",
+    "language": "English",
+    "voice": "sage"
+  },
+  "schema": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "AgentResponse",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "answer": { "type": "string" },
+          "source": { "type": "string" },
+          "confidence": { "type": "string" },
+          "follow_up_needed": { "type": "boolean" }
+        },
+        "required": ["answer", "source", "confidence", "follow_up_needed"],
+        "additionalProperties": false
+      }
+    }
+  }
+}

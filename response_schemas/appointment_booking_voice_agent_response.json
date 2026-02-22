@@ -1,0 +1,8 @@
+{
+  "agent_name": "Appointment Booking Voice Agent",
+  "agent_id": "699aac45dbfbe2b909c9ace3",
+  "description": "Conducts voice conversations to collect appointment details (date, time, purpose), checks calendar availability, and books meetings on Google Calendar",
+  "agent_type": "voice",
+  "accessor": "websocket",
+  "auto_generated": true
+}

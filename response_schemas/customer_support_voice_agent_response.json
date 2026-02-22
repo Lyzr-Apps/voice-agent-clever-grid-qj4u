@@ -1,0 +1,8 @@
+{
+  "agent_name": "Customer Support Voice Agent",
+  "agent_id": "699aac1ddbfbe2b909c9ace0",
+  "description": "Handles inbound calls to answer customer questions, FAQs, and product inquiries using company knowledge base via natural voice conversation",
+  "agent_type": "voice",
+  "accessor": "websocket",
+  "auto_generated": true
+}

@@ -1,0 +1,45 @@
+{
+  "nodes": [
+    {
+      "id": "input_node",
+      "type": "Input",
+      "label": "Incoming Call",
+      "nodeCategory": "input"
+    },
+    {
+      "id": "support_agent",
+      "type": "Agent",
+      "label": "Customer Support Voice Agent",
+      "nodeCategory": "agent",
+      "agent_id": "699aac1ddbfbe2b909c9ace0"
+    },
+    {
+      "id": "booking_agent",
+      "type": "Agent",
+      "label": "Appointment Booking Voice Agent",
+      "nodeCategory": "agent",
+      "agent_id": "699aac45dbfbe2b909c9ace3"
+    },
+    {
+      "id": "lead_agent",
+      "type": "Agent",
+      "label": "Lead Qualification Voice Agent",
+      "nodeCategory": "agent",
+      "agent_id": "699aac3607441b9b9ccdfd69"
+    }
+  ],
+  "edges": [
+    {
+      "source": "input_node",
+      "target": "support_agent"
+    },
+    {
+      "source": "input_node",
+      "target": "booking_agent"
+    },
+    {
+      "source": "input_node",
+      "target": "lead_agent"
+    }
+  ]
+}

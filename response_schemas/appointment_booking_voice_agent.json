@@ -1,0 +1,35 @@
+{
+  "agent_name": "Appointment Booking Voice Agent",
+  "agent_id": "699aac45dbfbe2b909c9ace3",
+  "agent_type": "voice",
+  "accessor": "voice",
+  "has_module_outputs": false,
+  "voice_config": {
+    "mode": "both",
+    "initiator": "human",
+    "message": "",
+    "language": "English",
+    "voice": "sage"
+  },
+  "schema": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "AgentResponse",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "appointment_status": { "type": "string" },
+          "date": { "type": "string" },
+          "time": { "type": "string" },
+          "purpose": { "type": "string" },
+          "attendees": { "type": "string" },
+          "calendar_event_id": { "type": "string" },
+          "notes": { "type": "string" }
+        },
+        "required": ["appointment_status", "date", "time", "purpose", "attendees", "calendar_event_id", "notes"],
+        "additionalProperties": false
+      }
+    }
+  }
+}

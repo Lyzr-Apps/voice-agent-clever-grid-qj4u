@@ -1,0 +1,69 @@
+{
+  "app_name": "VoiceAssist AI",
+  "pattern": "multiple_independent_agents",
+  "agents": [
+    {
+      "name": "Customer Support Voice Agent",
+      "agent_id": "699aac1ddbfbe2b909c9ace0",
+      "agent_type": "voice",
+      "voice_config": {
+        "mode": "inbound",
+        "initiator": "human",
+        "language": "English",
+        "voice": "sage"
+      },
+      "has_knowledge_base": true,
+      "rag_id": "699aac0ee12ce1682031317a",
+      "rag_name": "voiceassistcompanyknowledgebaseitp8",
+      "model": "gpt-4.1",
+      "provider": "openai",
+      "temperature": 0.4,
+      "top_p": 0.95,
+      "tools": ["KNOWLEDGE_BASE"]
+    },
+    {
+      "name": "Appointment Booking Voice Agent",
+      "agent_id": "699aac45dbfbe2b909c9ace3",
+      "agent_type": "voice",
+      "voice_config": {
+        "mode": "both",
+        "initiator": "human",
+        "language": "English",
+        "voice": "sage"
+      },
+      "has_knowledge_base": false,
+      "model": "gpt-4.1",
+      "provider": "openai",
+      "temperature": 0.3,
+      "top_p": 1,
+      "tools": ["GOOGLECALENDAR_FIND_FREE_SLOTS", "GOOGLECALENDAR_CREATE_EVENT", "GOOGLECALENDAR_LIST_CALENDARS"]
+    },
+    {
+      "name": "Lead Qualification Voice Agent",
+      "agent_id": "699aac3607441b9b9ccdfd69",
+      "agent_type": "voice",
+      "voice_config": {
+        "mode": "outbound",
+        "initiator": "human",
+        "language": "English",
+        "voice": "sage"
+      },
+      "has_knowledge_base": false,
+      "model": "gpt-4.1",
+      "provider": "openai",
+      "temperature": 0.4,
+      "top_p": 0.95,
+      "tools": []
+    }
+  ],
+  "knowledge_bases": [
+    {
+      "name": "VoiceAssist Company Knowledge Base",
+      "rag_id": "699aac0ee12ce1682031317a",
+      "rag_name": "voiceassistcompanyknowledgebaseitp8",
+      "linked_agent": "Customer Support Voice Agent",
+      "linked_agent_id": "699aac1ddbfbe2b909c9ace0"
+    }
+  ],
+  "schedules": []
+}

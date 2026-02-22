@@ -1,0 +1,8 @@
+{
+  "agent_name": "Lead Qualification Voice Agent",
+  "agent_id": "699aac3607441b9b9ccdfd69",
+  "description": "Engages prospects in structured voice conversations, asks qualifying questions (budget, timeline, needs, authority), and scores leads based on predefined criteria",
+  "agent_type": "voice",
+  "accessor": "websocket",
+  "auto_generated": true
+}
